@@ -1,0 +1,131 @@
+/* General styles for both light and dark mode */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Light mode styles */
+body.light-mode {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.toolbar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.toolbar button,
+.toolbar input {
+    padding: 5px;
+    margin-right: 5px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.toolbar button:hover,
+.toolbar input:hover {
+    background-color: #0056b3;
+}
+
+textarea,
+#note {
+    width: 100%;
+    height: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    resize: none;
+    overflow: auto;
+}
+
+#note {
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    outline: none;
+}
+
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#clearBtn {
+    background-color: #dc3545;
+}
+
+#clearBtn:hover {
+    background-color: #c82333;
+}
+
+#darkModeToggle {
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    background-color: #6c757d;
+}
+
+#darkModeToggle:hover {
+    background-color: #5a6268;
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #f4f4f4;
+}
+
+body.dark-mode .container {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode #note {
+    background-color: #333;
+    color: #f4f4f4;
+    border: 1px solid #555;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PrimeNote</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>PrimeNote</h1>
+
+        <!-- Toolbar for text formatting -->
+        <div class="toolbar">
+            <button onclick="format('bold')"><b>B</b></button>
+            <button onclick="format('italic')"><i>I</i></button>
+            <button onclick="format('underline')"><u>U</u></button>
+            <button onclick="format('insertOrderedList')">OL</button>
+            <button onclick="format('insertUnorderedList')">UL</button>
+            <input type="color" id="colorPicker" title="Text Color" onchange="setColor()">
+            <input type="file" id="imageUploader" title="Upload Image" accept="image/*">
+        </div>
+
+        <!-- Editable content area -->
+        <div id="note" contenteditable="true" class="note" placeholder="Write your note here..."></div>
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button id="saveBtn">Save Note</button>
+            <button id="clearBtn">Clear Note</button>
+        </div>
+
+        <!-- Dark Mode Toggle -->
+        <button id="darkModeToggle">Switch to Dark Mode</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
